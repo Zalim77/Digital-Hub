@@ -28,7 +28,7 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 const searchInput = document.getElementById("searchInput");
 const suggestionsBox = document.getElementById("suggestions");
 
-const toolsList = ["Canva Pro","ChatGPT Premium","SEO Tool"];
+const toolsList = ["Canva Pro","ChatGPT Premium","SEO Tool","Veo 3","HeyGen AI","Cursor AI","Gemini Pro","ElevenLabs AI","Claude AI","Suno AI","Leonardo AI","CapCut Pro","VidIQ Boost","Nord VPN","Surfshark VPN","SEMrush","Moz Pro"];
 
 if(searchInput){
 searchInput.addEventListener("keyup", function () {
