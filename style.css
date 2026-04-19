@@ -430,6 +430,7 @@ display:block;
     border-radius: 10px;
     gap: 20px;
     border-color: ;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
  
 /* BUTTON */
