@@ -214,6 +214,7 @@ outline:none;
 
 /* SUGGESTIONS */
 #suggestions{
+color:black;
 background:#fff;
 max-width:420px;
 margin:auto;
