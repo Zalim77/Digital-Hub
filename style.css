@@ -153,7 +153,8 @@ color:var(--accent);
 
 /* ===== SECTIONS ===== */
 .section{
- margin-top: 20px;
+ margin: 20px;
+padding:20px;
 }
 .section h2{
   color: #3903ef;
