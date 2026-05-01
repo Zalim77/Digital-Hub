@@ -1,126 +1,100 @@
-const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav-links");
+function toggleMenu(e){
+e.stopPropagation();
 
-// OPEN MENU
-toggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  nav.classList.toggle("active");
-});
-
-// CLICK INSIDE MENU
-nav.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-// CLICK OUTSIDE → CLOSE
-document.addEventListener("click", () => {
-  nav.classList.remove("active");
-});
-
-// CLICK LINK → CLOSE
-document.querySelectorAll(".nav-links a").forEach(link=>{
-  link.addEventListener("click",()=>{
-    nav.classList.remove("active");
-  });
-});
-
-// SEARCH + SUGGESTIONS
-const searchInput = document.getElementById("searchInput");
-const suggestionsBox = document.getElementById("suggestions");
-
-const toolsList = ["Canva Pro","ChatGPT Premium","SEO Tool","Veo 3","HeyGen AI","Cursor AI","Gemini Pro","ElevenLabs AI","Claude AI","Suno AI","Leonardo AI","CapCut Pro","VidIQ Boost","Nord VPN","Surfshark VPN","SEMrush","Moz Pro"];
-
-if(searchInput){
-searchInput.addEventListener("keyup", function () {
-
-let input = searchInput.value.toLowerCase();
-let tools = document.querySelectorAll(".searchable");
-
-suggestionsBox.innerHTML = "";
-
-tools.forEach(tool => {
-let text = tool.innerText.toLowerCase();
-tool.style.display = text.includes(input) ? "block" : "none";
-});
-
-let filtered = toolsList.filter(item => item.toLowerCase().includes(input));
-
-filtered.forEach(item=>{
-let div=document.createElement("div");
-div.innerText=item;
-div.classList.add("suggestion-item");
-
-div.onclick=()=>{
-searchInput.value=item;
-suggestionsBox.innerHTML="";
-};
-
-suggestionsBox.appendChild(div);
-});
-});
+document.getElementById("navMenu").classList.toggle("open");
+document.getElementById("overlay").classList.toggle("show");
 }
 
-// 3D TILT
-function tilt(e) {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    card.style.transform = `rotateX(${ -y/12 }deg) rotateY(${ x/12 }deg) scale(1.05)`;
+function closeMenu(){
+document.getElementById("navMenu").classList.remove("open");
+document.getElementById("overlay").classList.remove("show");
 }
 
-// RESET
-function reset(card) {
-    card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+/* outside click close */
+document.addEventListener("click", function(e){
+
+let nav = document.getElementById("navMenu");
+let toggle = document.querySelector(".menu-toggle");
+
+if(!nav.contains(e.target) && !toggle.contains(e.target)){
+closeMenu();
 }
 
-// RIPPLE CLICK EFFECT
-function ripple(e) {
-    const card = e.currentTarget;
+});
 
-    const circle = document.createElement("span");
-    const diameter = Math.max(card.clientWidth, card.clientHeight);
 
-    circle.style.width = circle.style.height = diameter + "px";
-    circle.style.left = e.clientX - card.getBoundingClientRect().left - diameter/2 + "px";
-    circle.style.top = e.clientY - card.getBoundingClientRect().top - diameter/2 + "px";
 
-    circle.style.position = "absolute";
-    circle.style.background = "rgba(56,189,248,0.4)";
-    circle.style.borderRadius = "50%";
-    circle.style.transform = "scale(0)";
-    circle.style.animation = "rippleAnim 0.6s linear";
-    
-    card.appendChild(circle);
+function filter(category = 'all') {
+  let cards = document.querySelectorAll('.card');
 
-    setTimeout(() => circle.remove(), 600);
-}
+  cards.forEach(card => {
+    let cat = card.getAttribute('data-cat');
 
-// Ripple animation
-const style = document.createElement("style");
-style.innerHTML = `
-@keyframes rippleAnim {
-    to {
-        transform: scale(4);
-        opacity: 0;
+    if (category === 'all' || cat === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
     }
-}`;
-document.head.appendChild(style);
-
-
-
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-function showSlide() {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[index].classList.add("active");
-
-    index++;
-    if (index >= slides.length) index = 0;
+  });
 }
 
-// Change every 4 seconds
-setInterval(showSlide, 4000);
+document.querySelectorAll(".rating-box").forEach((box) => {
+
+  let toolKey = "rating_" + box.dataset.tool;
+
+  // load or init data
+  let data = JSON.parse(localStorage.getItem(toolKey)) || {
+    users: Number(box.dataset.users),
+    avg: Number(box.dataset.avg),
+    lastUpdate: Date.now()
+  };
+
+  let totalScore = data.users * data.avg;
+
+  let stars = box.querySelectorAll(".stars span");
+  let result = box.querySelector(".result");
+
+  // ✅ AUTO hourly +1 user
+  function autoIncrease() {
+    let now = Date.now();
+    let hoursPassed = Math.floor((now - data.lastUpdate) / (1000 * 60 * 60));
+
+    if (hoursPassed > 0) {
+      data.users += hoursPassed; // +1 per hour
+      data.lastUpdate = now;
+
+      localStorage.setItem(toolKey, JSON.stringify(data));
+    }
+  }
+
+  function updateUI() {
+    let avgNow = (totalScore / data.users).toFixed(1);
+
+    result.innerText =
+      "⭐ " + avgNow + " / 5 (" + data.users + " users)";
+  }
+
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+
+      let value = Number(star.dataset.value);
+
+      data.users += 1;
+      totalScore += value;
+
+      localStorage.setItem(toolKey, JSON.stringify(data));
+
+      updateUI();
+    });
+  });
+
+  autoIncrease();
+  updateUI();
+
+  // check every minute
+  setInterval(() => {
+    autoIncrease();
+    updateUI();
+  }, 60000);
+
+});
