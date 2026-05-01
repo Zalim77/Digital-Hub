@@ -3,4 +3,3 @@ Allow: /
 
 Sitemap: https://www.digitalworld.forum/sitemap.xml
 
-Disallow:
