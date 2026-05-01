@@ -1,117 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PREMIUM AI TOOLS IN PAKISTAN | CHEAP CHATGPT PLUS, GEMINI PRO, SEO TOOLS<<</title>
+
+<meta name="description" content="Buy premium AI tools in Pakistan at cheapest prices. Get ChatGPT Plus, Gemini Pro, Claude AI, Canva Pro, Adobe Creative Cloud, SEO tools, VPNs and more at affordable rates.">
+
+<meta name="keywords" content="buy AI tools Pakistan, ChatGPT Plus cheap Pakistan, Gemini Pro price, Claude AI subscription, Canva Pro cheap, Adobe Creative Cloud Pakistan, SEO tools cheap, Semrush price Pakistan, VPN cheap Pakistan, NordVPN cheap, Surfshark cheap, AI tools marketplace Pakistan">
 <meta name="robots" content="index, follow">
-<meta name="author" content="Digital World Forum">
-<title>Free Online Tools | SEO, Text & Image Tools - Digital World Forum</title>
 
-<meta name="description" content="Explore free online tools including SEO tools, text tools, image tools and more. Fast, easy and free tools for daily use.">
-
-<meta name="keywords" content="free tools, seo tools, text tools, image tools, online utilities">
-
-<link rel="canonical" href="https://www.digitalworld.forum/all-tools">
-
- <link rel="icon" type="image/png" href="logo.png">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.digitalworld.forum/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "All Tools",
-      "item": "https://www.digitalworld.forum/all-tools"
-    }
-  ]
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<header class="navbar">
+<!-- ===== HEADER ===== -->
+<header class="header">
    <h2 class="logo">
-  <img src="logo.png" alt="DigitalHub Logo">
-</h2>
-  <h2 class="logo">Digital Hub</h2>
-  <div class="menu-toggle" id="menu-toggle">☰</div>
+    <img src="favicon.png" alt="Digital World Forum Logo"></h2>
+<h2 class="logo"> DIGITAL WORLD FORUM</h2>
+<div class="menu-toggle" onclick="toggleMenu(event)">
+  <i class="fa-solid fa-bars"></i>
+</div>
+</div>
+<nav id="navMenu">
+  <a href="index.html" class=""><i class="fa-solid fa-house"></i> Home</a>
+  <a href="tools.html" class="active"><i class="fa-solid fa-wand-magic-sparkles"></i> Tools</a>
+  <a href="turnitin.html"><i class="fa-solid fa-file-shield"></i> Turnitin Services</a>
+  <a href="socialmedia.html"><i class="fa-solid fa-hashtag"></i> SocialMedia Growth</a>
+  <a href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+</nav>
 
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="tools.html">Tools</a></li>
-    <li><a href="socialmedia.html">Social Media Growth</a></li>
-<li><a href="turnitin.html">Turnitin Services</a></li>
-<li><a href="about.html">About</a></li>
-  </ul>
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeMenu()"></div>
+
 </header>
 
+<!-- ===== HERO ===== -->
 <section class="hero">
-
-    <!-- Slide 1 - Content Writing -->
-    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1920&q=80');">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>Professional Content Writing</h1>
-            <p>Get high-quality blogs, articles & SEO content to grow your online business.</p>
-            
-        </div>
-    </div>
-
-    <!-- Slide 2 - Video Editing -->
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1920&q=80');">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>Advanced Video Editing</h1>
-            <p>Create cinematic videos, reels & YouTube content with professional editing.</p>
-            
-        </div>
-    </div>
-
-    <!-- Slide 3 - Shopify -->
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80');">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>Shopify Store Setup</h1>
-            <p>Launch your eCommerce business with ready-made Shopify stores & winning products.</p>
-            
-        </div>
-    </div>
-
+<h1>Explore Premium Tools Marketplace</h1>
+<p>Choose from AI tools, SEO tools, design software, VPNs, and more — all at the best prices in Pakistan.</p>
 </section>
 
-<section class="section">
-<h2 class="title">All Tools</h2>
+<!-- ===== CATEGORY FILTER ===== -->
+<section style="text-align:center; margin-top:20px;">
+<button class="btn" onclick="filter('all')">All</button>
+<button class="btn" onclick="filter('ai')">AI Tools</button>
+<button class="btn" onclick="filter('video')">Video</button>
+<button class="btn" onclick="filter('design')">Design</button>
+<button class="btn" onclick="filter('seo')">SEO</button>
+<button class="btn" onclick="filter('vpn')">VPN</button>
 
-<!-- SEARCH -->
-<div class="search-box">
-<input type="text" id="searchInput" placeholder="Search tools..." autocomplete="off">
-<div id="suggestions"></div>
+</section>
+<br>
+<!-- ===== PRODUCTS ===== -->
+<section class="grid" id="products">
+
+<div class="card" data-cat="ai">
+  <img src="chatgpt.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<span class="badge">Popular</span>
+<h1>ChatGPT Plus</h1>
+<p>Advanced AI assistant for content, coding & business.</p>
+<ul>
+    <li>Smart AI</li>
+    <li>More Messages And Upload</li>
+    <li>More Image Creation</li>
+    <li>Advanced Reasoning</li>
+</ul>
+<div class="rating-box" data-users="1340" data-avg="4.7" data-tool="tool-b">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
+
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
-<p style="text-align:center;font-weight:bold;">
-Available in stock - Instant delivery ✅ | Custom Orders Available
-</p>
-</section>
-<!-- TOOL CARD -->
+<div class="card" data-cat="ai">
+  <img src="gemini.png" style="hight:200px; width:300px; border-radius:5%;">
+<h1>Gemini Pro</h1>
+<p>Google AI tool for productivity and research.</p>
+<ul>
+<li>Smart AI</li>
+<li>Content generation</li>
+<li>Fast answers</li>
+<li>Automation</li>
+</ul>
+<div class="rating-box" data-users="1105" data-avg="4.5" data-tool="tool-c">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<div class="grid">
-<div class="card searchable">
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
 
-<img src="https://img.icons8.com/color/96/video.png" alt="Veo AI">
-<div class="glow"></div>
-<h2>Veo 3 AI Video Tool</h2>
+<div class="card" data-cat="ai">
+  <img src="claude.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Claude AI</h1>
+<p>Smart AI assistant for writing & automation.</p>
+<ul>
+<li>Smart AI</li>
+<li>Code help</li>
+<li>Fast results</li>
+<li>High accuracy</li>
+</ul>
+<div class="rating-box" data-users="1708" data-avg="4.8" data-tool="tool-d">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
+
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
+
+<div class="card" data-cat="video">
+  <img src="heygen.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<h1>HeyGen</h1>
+<p>AI video generation tool for creators.</p>
+<ul>
+<li>AI avatars</li>
+<li>Text to video</li>
+<li>Voice sync</li>
+<li>Professional output</li>
+</ul>
+<div class="rating-box" data-users="1303" data-avg="4.7" data-tool="tool-e">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
+
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
+
+<div class="card" data-cat="video">
+  <img src="icon.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Runway ML</h1>
+<p>Advanced AI video editing platform.</p>
+<ul>
+        <li>AI Video Generation</li>
+        <li>Background Removal</li>
+        <li>Green Screen (AI)</li>
+        <li>Creative AI Tools</li>
+      </ul>
+      <div class="rating-box" data-users="1436" data-avg="4.8" data-tool="tool-f">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
+
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
+
+
+
+<div class="card" data-cat="design">
+  <img src="figma.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Figma</h1>
+<p>Professional UI/UX design tool.</p>
+<ul>
+        <li>UI/UX Design Tool</li>
+        <li>Real-time Collaboration</li>
+        <li>Auto Layout</li>
+        <li>Cloud-based Access</li>
+      </ul>
+      <div class="rating-box" data-users="1598" data-avg="4.8" data-tool="tool-g">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
+
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
+
+<div class="card" data-cat="video">
+  <img src="veo.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Veo 3</h1>
 
 <p>Create high-quality AI videos easily with Veo 3.</p>
 
@@ -121,35 +232,25 @@ Available in stock - Instant delivery ✅ | Custom Orders Available
 <li>Fast rendering</li>
 <li>User friendly</li>
 </ul>
+<div class="rating-box" data-users="1271" data-avg="4.6" data-tool="tool-h">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/923292891698?text=I want to buy Veo 3" class="buy" target="_blank">Buy Now</a>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/artificial-intelligence.png">
-
-<h2>HeyGen AI</h2>
-
-<p>Create AI avatar videos for marketing.</p>
-
-<ul>
-<li>AI avatars</li>
-<li>Text to video</li>
-<li>Voice sync</li>
-<li>Professional output</li>
-</ul>
-
-<a href="https://wa.me/923292891698?text=I want to buy HeyGen AI" class="buy" target="_blank">Buy Now</a>
-</div>
-
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/code.png">
-
-<h2>Cursor AI</h2>
+<div class="card" data-cat="ai">
+  <img src="cursor.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Cursor AI</h1>
 
 <p>Boost your coding productivity.</p>
 
@@ -159,111 +260,25 @@ Available in stock - Instant delivery ✅ | Custom Orders Available
 <li>Error fixing</li>
 <li>Fast development</li>
 </ul>
+<div class="rating-box" data-users="1915" data-avg="4.9" data-tool="tool-i">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/92XXXXXXXXXX?text=I want to buy Cursor AI" class="buy" target="_blank">Buy Now</a>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/google-logo.png">
-
-<h2>Gemini Pro</h2>
-
-<p>Advanced AI for writing and research.</p>
-
-<ul>
-<li>Smart AI</li>
-<li>Content generation</li>
-<li>Fast answers</li>
-<li>Automation</li>
-</ul>
-
-<a href="https://wa.me/923292891698?text=I want to buy Gemini Pro" class="buy" target="_blank">Buy Now</a>
-</div>
-
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/microphone.png">
-
-<h2>ElevenLabs AI</h2>
-
-<p>Generate realistic AI voice.</p>
-
-<ul>
-<li>Real voice</li>
-<li>Multiple languages</li>
-<li>HD audio</li>
-<li>Fast generation</li>
-</ul>
-
-<a href="https://wa.me/923292891698?text=I want to buy ElevenLabs AI" class="buy" target="_blank">Buy Now</a>
-</div>
-
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/artificial-intelligence.png">
-
-<h2>Claude AI</h2>
-
-<p>AI assistant for writing and coding.</p>
-
-<ul>
-<li>Smart AI</li>
-<li>Code help</li>
-<li>Fast results</li>
-<li>High accuracy</li>
-</ul>
-
-<a href="https://wa.me/923292891698?text=I want to buy Claude AI" class="buy" target="_blank">Buy Now</a>
-</div>
-
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/music.png">
-
-<h2>Suno AI</h2>
-
-<p>Create AI music easily.</p>
-
-<ul>
-<li>AI songs</li>
-<li>Creative music</li>
-<li>Fast output</li>
-<li>High quality</li>
-</ul>
-
-<a href="https://wa.me/923292891698?text=I want to buy Suno AI" class="buy" target="_blank">Buy Now</a>
-</div>
-
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/image.png">
-
-<h2>Leonardo AI</h2>
-
-<p>Create AI images and art.</p>
-
-<ul>
-<li>AI art</li>
-<li>High resolution</li>
-<li>Creative styles</li>
-<li>Fast generation</li>
-</ul>
-
-<a href="https://wa.me/923292891698?text=I want to buy Leonardo AI" class="buy" target="_blank">Buy Now</a>
-</div>
-
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/video-editing.png">
-
-<h2>CapCut Pro</h2>
+<div class="card" data-cat="video">
+  <img src="capcut.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>CapCut Pro</h1>
 
 <p>Edit videos with premium features.</p>
 
@@ -273,16 +288,53 @@ Available in stock - Instant delivery ✅ | Custom Orders Available
 <li>Fast editing</li>
 <li>HD export</li>
 </ul>
+<div class="rating-box" data-users="1731" data-avg="4.8" data-tool="tool-j">
+<div clasd="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/923292891698?text=I want to buy CapCut Pro" class="buy" target="_blank">Buy Now</a>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
+<div class="card" data-cat="ai">
+  <img src="elevenlabs.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<h1>ElevenLabs AI</h1>
 
-<div class="card searchable">
+<p>Generate realistic AI voice.</p>
 
-<img src="https://img.icons8.com/color/96/youtube-play.png">
+<ul>
+<li>Real voice</li>
+<li>Multiple languages</li>
+<li>HD audio</li>
+<li>Fast generation</li>
+</ul>
+<div class="rating-box" data-users="1123" data-avg="4.5" data-tool="tool-k">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<h2>VidIQ Boost</h2>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
+
+<div class="card" data-cat="video">
+  <img src="vidIQ.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>VidIQ Boost</h1>
 
 <p>Grow your YouTube channel.</p>
 
@@ -292,90 +344,223 @@ Available in stock - Instant delivery ✅ | Custom Orders Available
 <li>Analytics</li>
 <li>Growth tracking</li>
 </ul>
+<div class="rating-box" data-users="2054" data-avg="4.9" data-tool="tool-l">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/923292891698?text=I want to buy VidIQ Boost" class="buy" target="_blank">Buy Now</a>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
+<div class="card" data-cat="ai">
+  <img src="leonardo.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Leonardo AI</h1>
 
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/security-checked.png">
-
-<h2>Nord VPN</h2>
-
-<p>Secure your internet connection.</p>
+<p>Create AI images and art.</p>
 
 <ul>
-<li>Fast servers</li>
-<li>Secure browsing</li>
-<li>No logs</li>
-<li>Global access</li>
+<li>AI art</li>
+<li>High resolution</li>
+<li>Creative styles</li>
+<li>Fast generation</li>
 </ul>
+<div class="rating-box" data-users="1452" data-avg="4.8" data-tool="tool-m">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/923292891698?text=I want to buy Nord VPN" class="buy" target="_blank">Buy Now</a>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
+<div class="card" data-cat="ai">
+  <img src="suno.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Suno AI</h1>
 
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/shield.png">
-
-<h2>Surfshark VPN</h2>
-
-<p>Affordable VPN for privacy.</p>
+<p>Create AI music easily.</p>
 
 <ul>
-<li>Unlimited devices</li>
-<li>Fast speed</li>
-<li>Secure connection</li>
-<li>Global servers</li>
+<li>AI songs</li>
+<li>Creative music</li>
+<li>Fast output</li>
+<li>High quality</li>
 </ul>
+<div class="rating-box" data-users="1230" data-avg="4.6" data-tool="tool-n">
+<div clasa="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/923292891698?text=I want to buy Surfshark VPN" class="buy" target="_blank">Buy Now</a>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/combo-chart.png">
-
-<h2>SEMrush</h2>
-
-<p>Professional SEO tool.</p>
-
+<div class="card" data-cat="seo">
+  <img src="sem.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Semrush</h1>
+<p>Complete SEO & marketing toolkit.</p>
+<ul>
 <ul>
 <li>Keyword research</li>
 <li>Backlinks</li>
 <li>Competitor analysis</li>
 <li>Site audit</li>
 </ul>
+<div class="rating-box" data-users="1610" data-avg="4.8" data-tool="tool-a">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/923292891698?text=I want to buy SEMrush" class="buy" target="_blank">Buy Now</a>
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
-
-<div class="card searchable">
-
-<img src="https://img.icons8.com/color/96/search.png">
-
-<h2>Moz Pro</h2>
-
-<p>Improve website SEO.</p>
-
+<div class="card" data-cat="seo">
+  <img src="moz.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Moz Pro</h1>
+<p>SEO optimization and ranking tools.</p>
 <ul>
 <li>SEO tools</li>
 <li>Rank tracking</li>
 <li>Site analysis</li>
 <li>Optimization</li>
 </ul>
+<div class="rating-box" data-users="1006" data-avg="4.4" data-tool="tool-o">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
 
-<a href="https://wa.me/923292891698?text=I want to buy Moz Pro" class="buy" target="_blank">Buy Now</a>
 </div>
-</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
 </div>
 
+<div class="card" data-cat="vpn">
+  <img src="nordvpn.jpg" style="hight:200px; width:300px; border-radius:10%;">
+<h1>NordVPN</h1>
+<p>Secure and fast internet privacy tool.</p>
+<ul>
+<li>Fast servers</li>
+<li>Secure browsing</li>
+<li>No logs</li>
+<li>Global access</li>
+</ul>
+<div class="rating-box" data-users="903" data-avg="4.3" data-tool="tool-p">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
+
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
+
+<div class="card" data-cat="vpn">
+  <img src="surfshark.png" style="hight:200px; width:300px; border-radius:10%;">
+<h1>Surfshark VPN</h1>
+<p>Affordable VPN for safe browsing.</p>
+<ul>
+<li>Unlimited devices</li>
+<li>Fast speed</li>
+<li>Secure connection</li>
+<li>Global servers</li>
+</ul>
+<div class="rating-box" data-users="1501" data-avg="4.8" data-tool="tool-q">
+<div class="stars">
+    <span data-value="1">⭐</span>
+    <span data-value="2">⭐</span>
+    <span data-value="3">⭐</span>
+    <span data-value="4">⭐</span>
+    <span data-value="5">⭐</span>
+  </div>
+  |
+ <br>
+  <p class="result"></p>
+
+</div>
+<a href="https://wa.me/923292891698" target="_blank">Buy Now</a>
+</div>
+
+<dev class="card">
+    <h3>To Get Turnitin Services <a href="turnitin.html">CLICK HERE</a></h3>
+
+</dev>
+</section>
 <br>
-<p style="text-align:center;">To get social media services <a href="about.html">CLICK HERE</a></p>
+<!-- ===== SEO CONTENT ===== -->
+<section class="grid">
+
+<div class="card">
+<h3>Buy AI Tools in Pakistan</h3>
+<p>
+If you are looking to buy AI tools in Pakistan at affordable prices, Digital World Forum is your best choice. We provide premium subscriptions like ChatGPT Plus, Gemini Pro, Claude AI, and more at budget-friendly rates.
+</p>
+</div>
+
+<div class="card">
+<h3>Cheap SEO Tools</h3>
+<p>
+Get access to top SEO tools like Semrush and Moz Pro at cheap prices. Perfect for bloggers, freelancers, and agencies who want to rank websites on Google.
+</p>
+</div>
+
+<div class="card">
+<h3>Design & Video Tools</h3>
+<p>
+We offer tools like Figma, Leonardo AI, Runway ML, and HeyGen to help you create professional designs and videos easily.
+</p>
+</div>
+
+<div class="card">
+<h3>VPN & Security Tools</h3>
+<p>
+Stay secure online with NordVPN and Surfshark VPN. Fast, secure, and reliable internet privacy tools available at affordable prices.
+</p>
+</div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
 
 <footer class="footer">
 
@@ -383,8 +568,8 @@ Available in stock - Instant delivery ✅ | Custom Orders Available
 
   <!-- BRAND -->
   <div class="footer-col">
-    <h2>Digital Hub</h2>
-    <p>Your trusted platform to buy premium digital tools and services. Start your online earning journey with us.</p>
+    <h2>Digital World Forum</h2>
+    <p>One Place For All Your Premium Tools.</p>
   </div>
 
   <!-- QUICK LINKS -->
@@ -392,8 +577,9 @@ Available in stock - Instant delivery ✅ | Custom Orders Available
     <h3>Quick Links</h3>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="tools.html">Tools</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li><a href="tools.html" class="active">Tools</a></li>
+      <li><a href="turnitin.html">Turnitin Services</a></li>
+      <li><a href="socialmedia.html">SocialMedia Growth</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -402,23 +588,19 @@ Available in stock - Instant delivery ✅ | Custom Orders Available
   <div class="footer-col">
     <h3>Services</h3>
     <ul>
+      <li>Turnitin Services</li>
       <li>Graphic Design</li>
       <li>SEO Optimization</li>
       <li>Content Writing</li>
-      <li>YouTube Growth</li>
+      <li>Social Media Growth</li>
     </ul>
   </div>
-
-  <!-- CONTACT -->
-  
-
-</div>
-
 <div class="footer-bottom">
-  <p>© 2026 Digital Hub. All Rights Reserved.</p>
+<p>© 2026 Digital World Forum | All Rights Reserved</p>
 </div>
-
 </footer>
+
+<!-- ===== JS FILTER ===== -->
 <script src="script.js"></script>
 </body>
 </html>
